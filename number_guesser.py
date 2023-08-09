@@ -1,19 +1,10 @@
 import random
+from most_used_functions import is_valid
 
 
 """Generation of a random number"""
 random_number = random.randrange(1, 101)
 print("Welcome to number guesser! Please, input your guess:", end='')
-
-
-def is_valid(num: str) -> bool:
-    for element in num:
-        if not element.isdigit():
-            return False
-    if 1 <= int(num) <= 100:
-        return True
-    else:
-        return False
 
 
 """counter of attempts"""

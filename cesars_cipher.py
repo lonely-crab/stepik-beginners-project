@@ -1,3 +1,6 @@
+from most_used_functions import is_valid
+
+
 def coder_decoder(s: str, lang: str, step: int) -> str:
     new_str = ''
     if lang.lower() in 'russianрусский':
@@ -18,16 +21,6 @@ def coder_decoder(s: str, lang: str, step: int) -> str:
             else:
                 new_str += chr(ord_lower + (ord(e) - ord_lower + step) % power)
     return new_str
-
-
-def is_valid(num: str) -> bool:
-    for element in num:
-        if not element.isdigit():
-            return False
-    if 1 <= int(num) <= 100:
-        return True
-    else:
-        return False
 
 
 print('Hello! This program purpose is to code or decode with Cesar\'s cipher.')
